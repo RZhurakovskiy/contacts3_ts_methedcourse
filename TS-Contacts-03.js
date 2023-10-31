@@ -1,4 +1,5 @@
-var persons = [
+"use strict";
+const persons = [
     {
         type: 'admin',
         name: 'Иван Петров',
@@ -18,14 +19,14 @@ var persons = [
         role: "Администратор"
     },
 ];
-var logPerson = function (person) {
-    var information;
+const logPerson = (person) => {
+    let information;
     if (person.type === 'admin') {
         information = person.role;
     }
     else {
         information = person.group;
     }
-    console.log("".concat(person.name, ", ").concat(person.age, ", ").concat(information));
+    console.log(`${person.name}, ${person.age}, ${information}`);
 };
 persons.forEach(logPerson);
